@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>welcome</title> 
+    </head>
+    <body class="one">
+        <style>
+            .cal{
+                margin-top: 60px;
+                padding-left: 10px;
+                margin-bottom: 20px;
+                
+            }
+            .one{
+              
+              background-image:url(./download.jpeg);
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              height: 100vh;
+              text-align: center;
+              align-items: center;
+              font-weight: bold;
+              
+            }
+            label{
+               display: inline-block;
+               background-origin: padding-box;
+               
+            }
+            .two{
+               
+                padding-left: 10px;
+            }
+            button{
+            background-color:lightcoral;
+            }
+        </style>
+        <div class="cal">
+        <label for="num1">Number1</label>
+        <input type="number" id="num1">
+</div>
+<div class="two">
+         <label for="num2">Number2</label>
+        <input type="number" id="num2">
+
+        </div>
+        <br>
+
+        <label for="operation">Operation</label>
+        <button onclick="calculate('add')" class="op"> Add</button>
+        <button onclick=" calculate('sub')"class="op">Subtract</button>
+        <button onclick="calculate('mul')" class="op">Multilply</button>
+        <button onclick="calculate('div')"  class="op">Division</button>
+        
+        <script> 
+            function calculate(ans){
+                const a=Number(document.getElementById("num1").value);
+                const b=Number(document.getElementById("num2").value);
+      
+                var c;
+                switch(ans){
+                    case "add":
+                         c=a+b;
+                        alert(" 🎉addition answer"+c);
+                        break;
+                     case "sub":
+                         c=a-b;
+                        alert("🎉subtarction"+c);
+                        break;
+                    case "mul":
+                         c=a*b;
+                        alert("🎉multiplication"+c);
+                        break;
+                    case "div":
+                         c=a/b;
+                        alert("🎉Division"+c);
+                        break;
+                    default:
+                        alert("Invalid Operation");
+                }
+
+
+                     }
+        </script>
+    </body>
+</html>
